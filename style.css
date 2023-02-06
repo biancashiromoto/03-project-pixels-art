@@ -26,3 +26,8 @@ body {
   font: 600 20px var(---body-font);
   text-align: center;
 }
+
+.color {
+  height: 50px;
+  width: 50px;
+}
