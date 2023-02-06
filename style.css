@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --title-font: 'Press Start 2P', cursive;
+  --body-font: 'Montserrat', sans-serif;
+
+  --background-color: #282a36;
+  --black: #212427;
+  --selected-grid: #6272a4;
+  --white: #f8f8f2;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font: 600 20px var(---body-font);
+  text-align: center;
+}
+
+h1 {
+  font: 30px var(--title-font);
+  margin-bottom: 2rem;
+}
