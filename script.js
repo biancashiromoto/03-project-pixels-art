@@ -63,9 +63,13 @@ randomColors.addEventListener('click', () => {
 // getLocalStorage();
 // *********************************************************
 
+const articleBoard = document.createElement('article');
+articleBoard.classList.add('article-board');
+main.appendChild(articleBoard);
+
 const pixelBoard = document.createElement('section');
 pixelBoard.setAttribute('id', 'pixel-board');
-main.appendChild(pixelBoard);
+articleBoard.appendChild(pixelBoard);
 
 for (let index = 0; index < 5; index += 1) {
   const pixel = document.createElement('div');
@@ -103,3 +107,14 @@ for (let index = 0; index < pixelSquares.length; index += 1) {
     pixelSquares[index].style.backgroundColor = getColor();
   });
 }
+
+const clearBoardButton = document.createElement('button');
+clearBoardButton.innerHTML = 'Limpar';
+clearBoardButton.setAttribute('id', 'clear-board');
+articlePalette.appendChild(clearBoardButton);
+
+clearBoardButton.addEventListener('click', () => {
+  for (let index = 0; index < pixelSquares.length; index += 1) {
+    pixelSquares[index].style.backgroundColor = 'white';
+  }
+});

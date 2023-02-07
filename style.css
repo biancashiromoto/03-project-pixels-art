@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-.article-palette {
+.article-palette, .article-board {
   align-items: center;
   display: flex;
   flex-direction: column;
