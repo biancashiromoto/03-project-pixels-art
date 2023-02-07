@@ -25,10 +25,43 @@ body {
   display: flex;
   flex-direction: column;
   font: 600 20px var(---body-font);
+  justify-content: center;
   text-align: center;
+}
+
+.article-palette {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
 }
 
 .color {
   height: 75px;
   width: 75px;
 }
+
+#color-palette {
+  align-items: center;
+  justify-content: center;
+}
+
+#pixel-board {
+  display: inline-block;
+  width: 250px;  
+}
+
+.pixel, .pixel2 {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px #000;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+#button-random-color {
+  padding: 0.75rem;
+  width: 200px;
+}
+

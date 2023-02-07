@@ -5,6 +5,7 @@ title.innerHTML = 'Paleta de Cores';
 title.setAttribute('id', 'title');
 const main = document.getElementsByTagName('main')[0];
 const articlePalette = document.createElement('article');
+articlePalette.classList.add('article-palette');
 main.appendChild(articlePalette);
 articlePalette.style.display = 'flex';
 const colorPalette = document.createElement('section');
@@ -23,7 +24,7 @@ for (let index = 0; index < colors.length; index += 1) {
 const randomColors = document.createElement('button');
 randomColors.setAttribute('id', 'button-random-color');
 randomColors.innerHTML = 'Cores aleatórias';
-main.appendChild(randomColors);
+articlePalette.appendChild(randomColors);
 const calcRandomColor = () => {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
@@ -47,3 +48,31 @@ const changeBackgroundColor = () => {
 randomColors.addEventListener('click', () => {
   changeBackgroundColor();
 });
+
+// ********************************************************
+// const getLocalStorage = () => {
+//   if (localStorage !== null) {
+//     const colorsArray = JSON.parse(localStorage.getItem('colorPalette'));
+//     const colorSquares = document.getElementsByClassName('color');
+//     for (let index = 1; index < colorSquares.length; index += 1) {
+//       colorSquares[index].style.backgroundColor = colorsArray[index];
+//     }
+//   }
+// };
+// getLocalStorage();
+// *********************************************************
+
+const pixelBoard = document.createElement('section');
+pixelBoard.setAttribute('id', 'pixel-board');
+main.appendChild(pixelBoard);
+
+for (let index = 0; index < 5; index += 1) {
+  const pixel = document.createElement('div');
+  pixelBoard.appendChild(pixel);
+  pixel.classList.add('pixel');
+  for (let index2 = 1; index2 < 5; index2 += 1) {
+    const pixel2 = document.createElement('div');
+    pixelBoard.appendChild(pixel2);
+    pixel2.classList.add('pixel');
+  }
+}
