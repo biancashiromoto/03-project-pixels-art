@@ -33,6 +33,7 @@ const calcRandomColor = () => {
   return newColor;
 };
 const colorSquare = document.querySelectorAll('.color');
+colorSquare[0].classList.add('selected');
 const changeBackgroundColor = () => {
   const bcgkColorArray = [];
   localStorage.setItem('colorPalette', bcgkColorArray);
@@ -42,7 +43,7 @@ const changeBackgroundColor = () => {
     colorSquareItem.style.backgroundColor = calcRandomColor();
     bcgkColorArray.push(colorSquareItem.style.backgroundColor);
   }
-  localStorage.colorPalette = JSON.stringify(bcgkColorArray);
+  localStorage.backgroundColor = JSON.stringify(bcgkColorArray);
 };
 
 randomColors.addEventListener('click', () => {
@@ -77,17 +78,12 @@ for (let index = 0; index < 5; index += 1) {
   }
 }
 
-const colorSquareItem = document.querySelectorAll('.color');
-for (let index = 0; index < colorSquareItem.length; index += 1) {
-  colorSquareItem[0].classList.add('selected');
-}
-
-// colorSquareItem.forEach(squareItem => {
-//   squareItem.addEventListener('click', () => {
-//     const selectedColor = document.querySelector('.selected-color');
-//     if (selectedColor) {
-//       selectedColor.classList.remove('selected-color');
-//     }
-//     squareItem.classList.add('selected-color');
-//   });
-// });
+colorSquare.forEach(squareItem => {
+  squareItem.addEventListener('click', () => {
+    const selectedColor = document.querySelector('.selected');
+    if (selectedColor) {
+      selectedColor.classList.remove('selected');
+    }
+    squareItem.classList.add('selected');
+  });
+});
