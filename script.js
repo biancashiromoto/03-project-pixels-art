@@ -78,6 +78,15 @@ for (let index = 0; index < 5; index += 1) {
   }
 }
 
+const getColor = () => {
+  const clickedColor = document.querySelectorAll('.selected');
+  for (let index = 0; index < clickedColor.length; index += 1) {
+    const squareItemBckgColor = clickedColor[index].style.backgroundColor;
+    console.log(squareItemBckgColor);
+    return squareItemBckgColor;
+  }
+};
+
 colorSquare.forEach(squareItem => {
   squareItem.addEventListener('click', () => {
     const selectedColor = document.querySelector('.selected');
@@ -87,3 +96,10 @@ colorSquare.forEach(squareItem => {
     squareItem.classList.add('selected');
   });
 });
+
+const pixelSquares = document.getElementsByClassName('pixel');
+for (let index = 0; index < pixelSquares.length; index += 1) {
+  pixelSquares[index].addEventListener('click', () => {
+    pixelSquares[index].style.backgroundColor = getColor();
+  });
+}
