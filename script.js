@@ -76,3 +76,18 @@ for (let index = 0; index < 5; index += 1) {
     pixel2.classList.add('pixel');
   }
 }
+
+const colorSquareItem = document.querySelectorAll('.color');
+for (let index = 0; index < colorSquareItem.length; index += 1) {
+  colorSquareItem[0].classList.add('selected');
+}
+
+// colorSquareItem.forEach(squareItem => {
+//   squareItem.addEventListener('click', () => {
+//     const selectedColor = document.querySelector('.selected-color');
+//     if (selectedColor) {
+//       selectedColor.classList.remove('selected-color');
+//     }
+//     squareItem.classList.add('selected-color');
+//   });
+// });
