@@ -1,10 +1,15 @@
 const getLocalStorage = () => {
+  const colorSquares = document.getElementsByClassName('color');
+  const pixelSquares = document.getElementsByClassName('pixel');
   if (localStorage.length !== 0) {
     const colorsArray = JSON.parse(localStorage.getItem('colorPalette'));
-    const colorSquares = document.getElementsByClassName('color');
+    const pixelSquaresArray = JSON.parse(localStorage.getItem('pixelBoard'));
     for (let index = 0; index < colorSquares.length; index += 1) {
-     colorSquares[index].style.backgroundColor = colorsArray[index];
+      colorSquares[index].style.backgroundColor = colorsArray[index];
     }
+    // for (let index = 0; index < pixelSquares.length; index += 1) {
+    // pixelSquares[index].style.backgroundColor = pixelSquaresArray[index];
+    // }
   }
 };
 
@@ -17,20 +22,15 @@ const main = document.getElementsByTagName('main')[0];
 const articlePalette = document.createElement('article');
 articlePalette.classList.add('article-palette');
 main.appendChild(articlePalette);
-articlePalette.style.display = 'flex';
 
 const colorPalette = document.createElement('section');
 colorPalette.setAttribute('id', 'color-palette');
-colorPalette.style.width = '300px';
-colorPalette.style.height = '100px';
-colorPalette.style.display = 'flex';
 articlePalette.appendChild(colorPalette);
 
 const colors = ['#000000', '#ffb86c', '#8be9fd', '#50fa7b'];
 for (let index = 0; index < colors.length; index += 1) {
   const colorSample = document.createElement('div');
   colorSample.classList.add('color');
-  colorSample.style.border = 'solid 1px black';
   colorPalette.appendChild(colorSample);
   colorSample.style.backgroundColor = colors[index];
 }
@@ -75,7 +75,6 @@ const setLocalStorage = () => {
     bcgkColorArray.push(newColorPaletteItem);
   }
   localStorage.colorPalette = JSON.stringify(bcgkColorArray);
-
 };
 
 randomColors.addEventListener('click', () => {
@@ -86,6 +85,23 @@ randomColors.addEventListener('click', () => {
 const articleBoard = document.createElement('article');
 articleBoard.classList.add('article-board');
 main.appendChild(articleBoard);
+
+const boardSizeContainer = document.createElement('section');
+boardSizeContainer.classList.add('board-size-container');
+articlePalette.appendChild(boardSizeContainer);
+
+const boardSize = document.createElement('input');
+boardSize.type = 'number';
+boardSize.setAttribute('id', 'board-size');
+boardSizeContainer.appendChild(boardSize);
+const generateBoard = document.createElement('button');
+generateBoard.innerHTML = 'VQV';
+generateBoard.setAttribute('id', 'generate-board');
+boardSizeContainer.appendChild(generateBoard);
+
+// if (boardSize.value <= 0 || boardSize.value === null) {
+//   alert('Board inválido!');
+// };
 
 const pixelBoard = document.createElement('section');
 pixelBoard.setAttribute('id', 'pixel-board');
@@ -121,9 +137,19 @@ colorSquare.forEach(squareItem => {
 });
 
 const pixelSquares = document.getElementsByClassName('pixel');
+const setLocalStorageBoard = () => {
+  const boardColorArray = [];
+  for (let index = 0; index < pixelSquares.length; index += 1) {
+    const pixelSquaresItem = pixelSquares[index].style.backgroundColor;
+    boardColorArray.push(pixelSquaresItem);
+  }
+  localStorage.pixelBoard = JSON.stringify(boardColorArray);
+};
+
 for (let index = 0; index < pixelSquares.length; index += 1) {
   pixelSquares[index].addEventListener('click', () => {
     pixelSquares[index].style.backgroundColor = getColor();
+    setLocalStorageBoard();
   });
 }
 

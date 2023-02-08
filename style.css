@@ -44,7 +44,10 @@ body {
 
 #color-palette {
   align-items: center;
+  display: flex;
+  height: 100px;
   justify-content: center;
+  width: 300px;
 }
 
 #pixel-board {
@@ -64,5 +67,20 @@ button {
   padding: 0.75rem;
   margin: 0.5rem;
   width: 150px;
+}
+
+.color {
+  border: solid 1px black;
+}
+
+.board-size-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#board-size , #generate-board {
+  height: 35px;
+  width: 50px;
 }
 
