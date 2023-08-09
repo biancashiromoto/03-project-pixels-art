@@ -5,7 +5,7 @@ import Row from '../Row/Row';
 const Board = () => {
   const { pixels } = useContext(context);
   return (
-    <div>
+    <div className='d-flex flex-column align-items-center'>
       {pixels.map((_pixel, index) => (<Row key={index} />))}
     </div>
   )
