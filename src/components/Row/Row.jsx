@@ -7,7 +7,6 @@ const Row = () => {
 
   const paintPixel = (e) => {
     let pixelStyle = e.target.style;
-    console.log(pixelStyle.backgroundColor);
     const white = 'rgb(255, 255, 255)';
     (pixelStyle.backgroundColor === currColor)
       ? (pixelStyle.backgroundColor = white)
