@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import './Pixel.css';
 
-const Pixel = () => {
+const Pixel = ({props}) => {
   return (
-    <div className='border border-dark'>
-      pixel
+    <div
+        className={ `pixel border border-dark ${props && props}` }
+        onClick={ () => console.log(props)}
+    >
     </div>
   )
 }
