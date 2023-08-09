@@ -5,12 +5,16 @@ import { useState } from 'react';
 const Provider = ({ children }) => {
   const [currColor, setCurrColor] = useState('white');
   const [boardSize, setBoardSize] = useState(2);
+  const pixels = Array.from({ length: boardSize }, () => '');
+  const colors = ['blue', 'cyan', 'green', 'magenta', 'red', 'yellow'];
 
   const value = {
     currColor,
     setCurrColor,
     boardSize,
-    setBoardSize
+    setBoardSize,
+    pixels,
+    colors,
   };
 
   return (
