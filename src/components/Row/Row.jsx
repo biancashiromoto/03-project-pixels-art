@@ -6,7 +6,10 @@ const Row = () => {
   const { currColor, pixels } = useContext(context);
 
   const paintPixel = (e) => {
-    e.target.style.backgroundColor = currColor;
+    let pixelStyle = e.target.style;
+    (pixelStyle.backgroundColor === 'white')
+      ? (pixelStyle.backgroundColor = currColor)
+      : (pixelStyle.backgroundColor = 'white');
   }
 
   return (
@@ -14,11 +17,7 @@ const Row = () => {
       {pixels.map((_pixel, index) => (
         <Pixel
           key={index}
-          onClick={ (e) => {
-            paintPixel(e);
-            console.log(`a pixel from Row was clicked and should have ${currColor} color`);
-          } }
-
+          onClick={ (e) => paintPixel(e) }
         />
       ))}
     </div>
