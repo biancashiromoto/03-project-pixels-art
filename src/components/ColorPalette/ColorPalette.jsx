@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { context } from '../../context/context';
 import Pixel from '../Pixel/Pixel';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './ColorPalette.css';
 
 const ColorPalette = () => {
