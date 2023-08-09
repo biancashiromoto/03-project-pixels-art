@@ -4,12 +4,16 @@ import Pixel from '../Pixel/Pixel';
 import './ColorPalette.css';
 
 const ColorPalette = () => {
-  const { colors } = useContext(context);
+  const { colors, setCurrColor } = useContext(context);
+
   return (
     <div className='d-flex mx-2'>
       {colors.map((color, index) => (
         <div key={index} className='pixel-container d-flex'>
-            <Pixel props={color} />
+            <Pixel
+              color={color}
+              onClick={ () => setCurrColor(color) }
+            />
         </div>
       ))}
     </div>
