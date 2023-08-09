@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { context } from "../../context/context";
 import Pixel from '../Pixel/Pixel';
 
