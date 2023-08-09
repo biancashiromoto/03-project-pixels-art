@@ -1,12 +1,14 @@
-import React from 'react';
+import { useContext } from "react";
+import { context } from "../../context/context";
 import Pixel from '../Pixel/Pixel';
 
-const Row = ({ props }) => {
+const Row = () => {
+  const { currColor, pixels } = useContext(context);
   return (
     <div className='d-flex'>
-      {props.map((_, index) => {
-        return <Pixel key={index} />
-      })}
+      {pixels.map((_pixel, index) => (
+        <Pixel key={index} />
+      ))}
     </div>
   )
 }
