@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import PropTypes from "prop-types"
 import './Pixel.css';
 
 const Pixel = ({ onClick, color }) => {
@@ -9,6 +9,11 @@ const Pixel = ({ onClick, color }) => {
     >
     </div>
   )
+}
+
+Pixel.propTypes = {
+  color: PropTypes.string,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Pixel;
