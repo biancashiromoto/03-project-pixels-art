@@ -1,20 +1,14 @@
-import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Row from './components/Row/Row';
+import Provider from './context/Provider';
+import Board from './components/Board/Board';
 
 function App() {
-  const [boardSize, setboardSize] = useState(2);
-  const pixels = Array.from({ length: boardSize });
   return (
-    <main>
-      <h1>Pixels art</h1>
-      <div className='d-flex align-items-center justify-content-center flex-column'>
-        {pixels.map((_, index) => {
-          return <Row key={index} props={pixels} />
-        })}
-      </div>
-    </main>
+   <Provider>
+    <h1>Pixels Art</h1>
+      <Board />
+  </Provider>
   )
 }
 
