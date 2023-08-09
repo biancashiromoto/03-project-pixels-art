@@ -7,6 +7,7 @@ const Provider = ({ children }) => {
   const [boardSize, setBoardSize] = useState(2);
   const pixels = Array.from({ length: boardSize }, () => '');
   const colors = ['blue', 'cyan', 'green', 'magenta', 'red', 'yellow'];
+  const [paletteColors, setPaletteColors] = useState(colors);
 
   const value = {
     currColor,
@@ -15,6 +16,8 @@ const Provider = ({ children }) => {
     setBoardSize,
     pixels,
     colors,
+    paletteColors,
+    setPaletteColors
   };
 
   return (
