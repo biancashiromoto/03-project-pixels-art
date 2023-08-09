@@ -1,0 +1,4 @@
+.pixel-container > * {
+  height: 10vh;
+  width: 10vh;
+}
