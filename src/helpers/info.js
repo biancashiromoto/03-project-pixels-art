@@ -12,4 +12,6 @@ export const colors = [
 
 export const randomColorsButton = 'Change colors';
 
+export const clearBoardButton = 'Clear board';
+
 export const INITIAL_PIXEL_SIZE = 100;
