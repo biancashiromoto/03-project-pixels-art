@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { context } from '../../context/context';
 import Row from '../Row/Row';
-import './Board.css';
 import { createArray } from '../../helpers/createArray';
 
 const Board = () => {
