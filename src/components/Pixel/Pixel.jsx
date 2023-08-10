@@ -1,5 +1,4 @@
-import PropTypes from "prop-types"
-import './Pixel.css';
+import PropTypes from "prop-types";
 
 const Pixel = ({ onClick, color, width }) => {
   const widthValue = Math.floor(width);
