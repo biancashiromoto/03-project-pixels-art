@@ -14,7 +14,7 @@ const BoardSizeSelector = () => {
       <input
         className='form-control-range'
         id='formControlRange'
-        min={2}
+        min={4}
         max={10}
         type='range'
         defaultValue={2}
