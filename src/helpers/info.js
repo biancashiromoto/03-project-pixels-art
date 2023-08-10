@@ -11,3 +11,5 @@ export const colors = [
 ];
 
 export const randomColorsButton = 'Change colors';
+
+export const INITIAL_PIXEL_SIZE = 100;
