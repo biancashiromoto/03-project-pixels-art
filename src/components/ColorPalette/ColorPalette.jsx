@@ -3,6 +3,8 @@ import { context } from '../../context/context';
 import Pixel from '../Pixel/Pixel';
 import './ColorPalette.css';
 import { getRandomColor } from '../../helpers/getRandomColor';
+import Button from '../Button/Button';
+import { randomColorsButton } from '../../helpers/info';
 
 const ColorPalette = () => {
   const { setCurrColor, paletteColors, setPaletteColors } = useContext(context);
@@ -23,16 +25,15 @@ const ColorPalette = () => {
           <div key={index} className='pixel-container d-flex'>
               <Pixel
                 color={color}
-                onClick={ () => {
-                  setCurrColor(color);
-                } }
+                onClick={ () => setCurrColor(color) }
               />
           </div>
         ))}
       </div>
-      <button
+      <Button
         onClick={ () => getNewColorPalette() }
-      >Random colors</button>
+        label={ randomColorsButton }
+      />
     </>
   )
 }
