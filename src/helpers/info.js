@@ -15,3 +15,5 @@ export const randomColorsButton = 'Change colors';
 export const clearBoardButton = 'Clear board';
 
 export const INITIAL_PIXEL_SIZE = 100;
+
+export const white = 'rgb(255, 255, 255)';
