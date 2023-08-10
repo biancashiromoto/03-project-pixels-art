@@ -17,19 +17,23 @@ const ColorPalette = () => {
   };
 
   return (
-    <div className='d-flex mx-2'>
-      {paletteColors.map((color, index) => (
-        <div key={index} className='pixel-container d-flex'>
-            <Pixel
-              color={color}
-              onClick={ () => setCurrColor(color) }
-            />
-        </div>
-      ))}
+    <>
+      <div className='d-flex mx-2 flex-wrap align-items-center justify-content-center'>
+        {paletteColors.map((color, index) => (
+          <div key={index} className='pixel-container d-flex'>
+              <Pixel
+                color={color}
+                onClick={ () => {
+                  setCurrColor(color);
+                } }
+              />
+          </div>
+        ))}
+      </div>
       <button
         onClick={ () => getNewColorPalette() }
       >Random colors</button>
-    </div>
+    </>
   )
 }
 
