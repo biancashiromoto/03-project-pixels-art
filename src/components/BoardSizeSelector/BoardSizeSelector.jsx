@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { context } from '../../context/context';
+import { INITIAL_BOARD_SIZE, MAX_BOARD_SIZE } from '../../helpers/info';
 
 const BoardSizeSelector = () => {
   const { boardSize, setBoardSize } = useContext(context);
@@ -14,10 +15,10 @@ const BoardSizeSelector = () => {
       <input
         className='form-control-range'
         id='formControlRange'
-        min={4}
-        max={10}
+        min={INITIAL_BOARD_SIZE}
+        max={MAX_BOARD_SIZE}
         type='range'
-        defaultValue={2}
+        defaultValue={INITIAL_BOARD_SIZE}
         onChange={ (e) => handleInputChange(e) }
       />
       <span>{boardSize}</span>
