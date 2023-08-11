@@ -18,10 +18,10 @@ const Pixel = ({ onClick, color, width, className }) => {
 }
 
 Pixel.propTypes = {
-  className: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  color: PropTypes.string,
   onClick: PropTypes.func.isRequired,
-  width: PropTypes.number.isRequired
+  width: PropTypes.string
 }
 
 export default Pixel;
