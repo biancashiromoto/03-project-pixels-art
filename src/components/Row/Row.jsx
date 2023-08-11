@@ -4,19 +4,14 @@ import Pixel from '../Pixel/Pixel';
 import { resizePixel } from "../../helpers/resizePixel";
 import { createArray } from "../../helpers/createArray";
 import { INITIAL_PIXEL_SIZE } from "../../helpers/info";
+import { paintPixel } from "../../helpers/paintPixel";
 
 const Row = () => {
   const { currColor, boardSize } = useContext(context);
   const [pixelSize, setPixelSize] = useState(INITIAL_PIXEL_SIZE);
   const pixels = createArray(boardSize);
+  console.log(boardSize);
   
-  const paintPixel = (e) => {
-    let pixelStyle = e.target.style;
-    const white = 'rgb(255, 255, 255)';
-    const isPixelWhite = pixelStyle.backgroundColor === '' || pixelStyle.backgroundColor === white;
-    (isPixelWhite ? pixelStyle.backgroundColor = currColor : pixelStyle.backgroundColor = white);
-  };
-
   useEffect(() => {
     const currPixelSize = resizePixel(boardSize);
     setPixelSize(currPixelSize);
@@ -27,7 +22,7 @@ const Row = () => {
       {pixels.map((_pixel, index) => (
         <Pixel
           key={index}
-          onClick={ (e) => paintPixel(e) }
+          onClick={ (e) => paintPixel(e, currColor) }
           width={ `${pixelSize}` }
         />
       ))}
