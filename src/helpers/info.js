@@ -1,6 +1,6 @@
 export const INITIAL_BOARD_SIZE = 4;
 
-export const MAX_BOARD_SIZE = 10;
+export const MAX_BOARD_SIZE = 20;
 
 export const colors = [
   '#985BEB',
