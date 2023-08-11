@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 const Button = ({label, onClick, className}) => {
   return (
     <button
-      className={className}
+      className={`${className} btn random-colors-button`}
       onClick={onClick}
+      
     >
       {label}
     </button>
