@@ -1,3 +1,3 @@
-export const createArray = (length) => {
-  return Array.from({length: length}, () => '');
+export const createArray = (length, content) => {
+  return Array.from({length: length}, () => content);
 }
