@@ -16,7 +16,6 @@ const BoardSizeSelector = () => {
       <Button
         onClick={(e)=> {
           e.preventDefault();
-          console.log(boardSize);
           setBoardSize(prevSize => prevSize <= INITIAL_BOARD_SIZE ? INITIAL_BOARD_SIZE : prevSize - 1)
         }}
         label='-'
@@ -28,7 +27,6 @@ const BoardSizeSelector = () => {
           min={INITIAL_BOARD_SIZE}
           max={MAX_BOARD_SIZE}
           type='range'
-          defaultValue={INITIAL_BOARD_SIZE}
           value={boardSize}
           onChange={ (e) => handleInputChange(e) }
           style={ {width: '200px'}}
