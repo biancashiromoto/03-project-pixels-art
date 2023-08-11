@@ -24,6 +24,7 @@ const Row = () => {
           key={index}
           onClick={ (e) => paintPixel(e, currColor) }
           width={ `${pixelSize}` }
+          className='board-pixel'
         />
       ))}
     </div>
