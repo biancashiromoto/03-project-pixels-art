@@ -10,6 +10,7 @@ const Pixel = ({ onClick, color, width, className }) => {
           backgroundColor: color,
           width: `${(widthValue)}px`,
           height: `${(widthValue)}px`,
+          padding: 0
         } }
     >
     </div>
