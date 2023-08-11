@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-const Pixel = ({ onClick, color, width }) => {
+const Pixel = ({ onClick, color, width, className }) => {
   const widthValue = Math.floor(width);
   return (
     <div
-        className={ `pixel border border-dark` }
+        className={ `${className} pixel border border-dark` }
         onClick={ onClick }
         style={ {
           backgroundColor: color,
@@ -17,9 +17,10 @@ const Pixel = ({ onClick, color, width }) => {
 }
 
 Pixel.propTypes = {
+  className: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  width: PropTypes.number
+  width: PropTypes.number.isRequired
 }
 
 export default Pixel;
