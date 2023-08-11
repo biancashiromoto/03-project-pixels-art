@@ -2,5 +2,5 @@ import { getScreenWidth } from "./getScreenWidth";
 
 export const resizePixel = (boardSize) => {
   const screenWidth = getScreenWidth();
-    return (screenWidth - (screenWidth * 0.8)) / boardSize;
+    return (screenWidth - (screenWidth * 0.75)) / boardSize;
 }
