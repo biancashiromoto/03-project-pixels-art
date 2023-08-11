@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import { context } from './context';
 import { useState } from 'react';
-import { INITIAL_BOARD_SIZE, colors } from "../helpers/info";
+import { INITIAL_BOARD_SIZE, colors, white } from "../helpers/info";
 
 const Provider = ({ children }) => {
-  const [currColor, setCurrColor] = useState('white');
+  const [currColor, setCurrColor] = useState(white);
   const [boardSize, setBoardSize] = useState(INITIAL_BOARD_SIZE);
   const [paletteColors, setPaletteColors] = useState(colors);
 
