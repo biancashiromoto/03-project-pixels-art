@@ -30,10 +30,12 @@ const ColorPalette = () => {
           </div>
         ))}
       </div>
-      <Button
-        onClick={ () => getNewColorPalette() }
-        label={ randomColorsButton }
-      />
+      <div>
+        <Button
+          onClick={ () => getNewColorPalette() }
+          label={ randomColorsButton }
+        />
+      </div>
     </>
   )
 }
