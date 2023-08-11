@@ -20,12 +20,13 @@ const ColorPalette = () => {
 
   return (
     <>
-      <div className='d-flex mx-2 flex-wrap align-items-center justify-content-center'>
+      <div className='d-flex mx-2 flex-wrap align-items-center justify-content-center gap-3'>
         {paletteColors.map((color, index) => (
           <div key={index} className='pixel-container d-flex'>
               <Pixel
                 color={color}
                 onClick={ () => setCurrColor(color) }
+                className='rounded rounded-circle'
               />
           </div>
         ))}
