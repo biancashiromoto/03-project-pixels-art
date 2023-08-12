@@ -36,7 +36,7 @@ O usuário também pode aleatorizar as cores na paleta e limpar o quadro clicand
 
 ## 🖼️ Screenshots
 <div style="display:flex;">
-  <img src="./screenshots/screenshot-01.png" alt="" height="150" width="300" />
+  <img src="./screenshots/screenshot-01.png" alt="Pixels Art screenshot" height="450" width="275" />
 </div>
 
 ## 🛠️ Technologies used/Tecnologias utilizadas
