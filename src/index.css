@@ -1,6 +1,4 @@
-/* :root {
-  --
-} */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Rubik+Iso&display=swap');
 
 * {
   margin: 0;
@@ -8,6 +6,7 @@
 }
 
 body {
+  align-items: center;
   animation: gradient 10s ease infinite;
   background: linear-gradient(-45deg, #6b143b, #500f69, #35163f, #720BE3, rgb(122, 94, 155));
   background-size: 400% 400%;
@@ -15,12 +14,18 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Rubik Iso', cursive;
+  font-size: 3rem;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   text-align: center;
 }
 
