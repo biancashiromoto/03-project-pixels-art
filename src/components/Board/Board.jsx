@@ -11,7 +11,7 @@ const Board = () => {
 
   useEffect(() => {
     clearBoard();
-  }, []);
+  }, [boardSize]);
 
   const clearBoard = () => {
     const boardPixels = document.getElementsByClassName('board-pixel');
