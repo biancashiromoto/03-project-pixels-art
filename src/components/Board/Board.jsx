@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { context } from '../../context/context';
 import Row from '../Row/Row';
 import { createArray } from '../../helpers/createArray';
@@ -8,7 +8,11 @@ import { clearBoardButton, white } from '../../helpers/info';
 const Board = () => {
   const { boardSize } = useContext(context);
   const pixels = createArray(boardSize);
-  
+
+  useEffect(() => {
+    clearBoard();
+  }, []);
+
   const clearBoard = () => {
     const boardPixels = document.getElementsByClassName('board-pixel');
     const boardPixelArray = [...boardPixels];
