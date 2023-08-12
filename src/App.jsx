@@ -8,7 +8,7 @@ import BoardSizeSelector from './components/BoardSizeSelector/BoardSizeSelector'
 function App() {
   return (
    <Provider>
-    <h1 className='pt-3 pb-2'>Pixels Art</h1>
+    <h1 className='py-2 h1 fs-1'>Pixels Art</h1>
       <ColorPalette />
       <BoardSizeSelector />
       <Board />
